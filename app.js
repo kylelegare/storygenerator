@@ -1,4 +1,4 @@
-const apiKey = "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";
+import { apiKey } from "./secrets";
 
 const generateStoryButton = document.getElementById("generate-story-button");
 const generatedStoryDiv = document.getElementById("generated-story");
@@ -14,7 +14,7 @@ generateStoryButton.addEventListener("click", async () => {
 
   // Use the OpenAI API to generate the story based on the prompt
   const response = await fetch(
-    `https://api.openai.com/v1/stories/completions?prompt=${prompt}&api_key=${apiKey}`
+    `https://api.openai.com/v1/completions?prompt=${encodeURIComponent(prompt)}&api_key=${apiKey}`
   );
 
   // Check if the response is defined

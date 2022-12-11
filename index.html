@@ -7,14 +7,15 @@
     <h1>Story Generator</h1>
     <form>
       <label for="character-name">What is the name of the main character of this story?</label><br>
-      <input type="text" id="character-name"><br>
+      <input type="text" id="character-name" name="character-name"><br>
       <label for="character-problem">What problem is the main character facing?</label><br>
-      <input type="text" id="character-problem"><br>
+      <input type="text" id="character-problem" name="character-problem"><br>
       <label for="story-location">Where does this story take place?</label><br>
-      <input type="text" id="story-location"><br>
+      <input type="text" id="story-location" name="story-location"><br>
     </form>
     <button id="generate-story-button">Click to generate Your Story</button>
     <div id="generated-story"></div>
-    <script src="app.js"></script>
+
+    <script src="./app.js" type="module"></script>
   </body>
 </html>
